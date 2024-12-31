@@ -1,0 +1,111 @@
+.skills-container {
+  display: flex;
+  gap: 20px;
+}
+
+.bubble {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+.circle-border {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg);
+  /* To make the progress start from the top */
+}
+
+.background-circle {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 10;
+}
+
+.proficiency-circle {
+  fill: none;
+  stroke: #4caf50;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 314.16;
+  /* Circumference of the circle (2 * Math.PI * 50) */
+  stroke-dashoffset: 62.83;
+  /* This will be dynamically calculated based on the proficiency */
+  transition: stroke-dashoffset 1s ease;
+}
+
+.skill-logo {
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  visibility: visible;
+  transition: visibility 0.1s ease;
+}
+
+.percentage-center {
+  position: absolute;
+  z-index: 3;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  visibility: hidden;
+  /* Initially hidden */
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.bubble:hover .percentage-center {
+  visibility: visible;
+  /* Show percentage on hover */
+  opacity: 1;
+}
+
+.bubble:hover .skill-logo {
+  visibility: hidden;
+  /* Hide logo on hover */
+  transition: visibility 0.1s ease, opacity 0.3s ease;
+
+}
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  /* Positioned above the circle */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bubble:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-text {
+  display: block;
+  font-weight: bold;
+}

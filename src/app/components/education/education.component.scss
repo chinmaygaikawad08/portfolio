@@ -1,0 +1,72 @@
+.education-container {
+  background-color: #001524; // Background color
+  padding: 20px;
+  color: #e5e5e5;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    color: #00b4d8; // Primary color for heading
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .education-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #0077b6; // Secondary color separator
+    padding: 15px 0;
+
+    .left {
+      flex: 1;
+      max-width: 40%; // Ensures left section takes less space
+      color: #dee2e6; // Slightly darker text color
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #00b4d8; // Primary color for title
+      }
+
+      .year {
+        font-size: 1rem;
+        color: #e9ecef; // Tertiary color for year
+      }
+    }
+
+    .right {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+
+      .label {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ffffff; // White for label
+        margin-bottom: 5px;
+      }
+
+      .institute {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #0077b6; // Secondary color for institute
+      }
+
+      .university {
+        font-size: 1rem;
+        color: #0e6ba8; // Tertiary color for university
+        margin-bottom: 10px;
+      }
+
+      .grade-chip {
+        display: inline-block;
+        background-color: #00b4d8; // Primary color for chip
+        color: #001524; // Dark background for text contrast
+        font-size: 0.9rem;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 20px;
+      }
+    }
+  }
+}

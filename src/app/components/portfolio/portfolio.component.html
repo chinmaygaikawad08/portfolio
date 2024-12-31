@@ -1,0 +1,58 @@
+<head>
+    <meta charset="utf-8">
+    <title>Chinmay Gaikawad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+        <div class="sidebar">
+            <!-- Top section: Name -->
+            <div class="sidebar-top">
+                <h1>Chinmay</h1>
+            </div>
+
+            <!-- Middle section: Tabs -->
+            <div class="sidebar-middle">
+
+                <ng-container *ngFor="let tab of tabMap">
+                    <span class="tabClass" [class.selected]="tab.key == selectedTab" (click)="selectTab(tab.key)">
+                        {{ tab.display }}
+                    </span>
+                </ng-container>
+            </div>
+
+            <!-- Bottom section: Social media icons -->
+            <div class="sidebar-bottom">
+                <a href="https://www.linkedin.com/" target="_blank" class="social-icon">
+                    <img src="../../../assets/Images/icons8-linkedin-2.svg" alt="Icon" width="16" height="16">
+                </a>
+                <a href="https://www.github.com/" target="_blank" class="social-icon">
+                    <img src="../../../assets/Images/github-142-svgrepo-com.svg" alt="Icon" width="16" height="16">
+                </a>
+                <a href="https://www.twitter.com/" target="_blank" class="social-icon">
+                    <img src="../../../assets/Images/icons8-x-logo-500.svg" alt="Icon" width="16" height="16">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                    <img src="../../../assets/Images/instagram-svgrepo-com.svg" alt="Icon" width="16" height="16">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                    <img src="../../../assets/Images/facebook-176-svgrepo-com.svg" alt="Icon" width="16" height="16">
+                </a>
+            </div>
+        </div>
+        <div class="mainPage">
+            <ng-container *ngIf="selectedTab=='EXPERIENCE'">
+                <app-experience></app-experience>
+            </ng-container>
+            <ng-container *ngIf="selectedTab=='EDUCATION'">
+                <app-education></app-education>
+            </ng-container>
+            <ng-container *ngIf="selectedTab=='SKILLS_TECHNOLOGIES'">
+                <app-skills></app-skills>
+            </ng-container>
+        </div>
+    </div>
+</body>

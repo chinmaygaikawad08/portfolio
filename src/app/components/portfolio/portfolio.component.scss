@@ -1,0 +1,135 @@
+@import '../../../style.scss'; // Importing root-level styles
+
+
+
+/* Sidebar container */
+.sidebar {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  /* Full height of the viewport */
+  width: 300px;
+  /* Sidebar width */
+  background-color: $background-primary;
+  /* Deep navy blue background */
+  display: flex;
+  flex-direction: column;
+  /* Stack items vertically */
+  padding: 20px 10px;
+  /* Space inside the sidebar */
+  font-family: 'Garamond', serif;
+  /* Garamond font */
+  justify-content: space-between;
+  /* Distribute space between top, middle, and bottom sections */
+}
+
+/* Top section: Name */
+.sidebar-top {
+  text-align: center;
+  color: $text-primary;
+  /* White color for the name */
+  margin-bottom: 20px;
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+}
+
+.sidebar-top h2 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Middle section: Tabs */
+.sidebar-middle {
+  flex-grow: 1;
+  /* Take up available space for tabs */
+  display: flex;
+  flex-direction: column;
+  /* Stack tabs vertically */
+}
+
+.sidebar .tabClass {
+  color: $text-secondary;
+  /* Light gray text color */
+  padding: 15px 20px;
+  /* Add padding to the text */
+  cursor: pointer;
+  text-transform: capitalize;
+  /* Capitalize text */
+  transition: color 0.3s ease, border-left-color 0.3s ease;
+  /* Smooth color and border transition */
+  margin: 5px 0;
+  /* Space between tabs */
+  border-left: 4px solid transparent;
+  /* Invisible border for alignment */
+  text-align: left;
+  /* Align text to the left */
+}
+
+/* Hover effect */
+.sidebar .tabClass:hover {
+  color: $text-secondary-hover;
+  /* Light cream text color on hover */
+  border-left-color: $nav-border-hover;
+  /* Blue border on hover */
+}
+
+/* Selected tab */
+.sidebar .tabClass.selected {
+  color: $text-primary;
+  /* White text for selected tab */
+  font-weight: bold;
+  /* Bold text for emphasis */
+  border-left-color: $nav-border-selected;
+  /* Light blue border for selected tab */
+}
+
+.sidebar-bottom {
+  display: flex;
+  justify-content: center;
+  /* Center icons horizontally */
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  /* Space between icons */
+  color: $text-secondary;
+  /* Light gray for icons */
+  font-size: 16px;
+  /* Smaller icon size */
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+}
+
+.social-icon:hover {
+  transform: scale(1.6);
+  /* Slight zoom effect on hover */
+  border-radius: 50%;
+  /* Circular background around the icon */
+}
+
+
+/* Sidebar container */
+.mainPage {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  /* Full height of the viewport */
+  width: calc(100% - 300px);
+  /* Sidebar width */
+  background-color: $background-primary;
+  /* Deep navy blue background */
+  display: flex;
+  flex-direction: column;
+  /* Stack items vertically */
+  padding: 20px 10px;
+  /* Space inside the sidebar */
+  font-family: 'Garamond', serif;
+  /* Garamond font */
+  justify-content: space-between;
+  /* Distribute space between top, middle, and bottom sections */
+}

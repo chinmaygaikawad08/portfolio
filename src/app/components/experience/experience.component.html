@@ -1,0 +1,22 @@
+<div class="experience-container">
+  <h2>Experience</h2>
+  <ng-container *ngFor="let exp of experience">
+    <div class="experience-item">
+      <div>
+        <h3 class="role">{{ exp.role }}</h3>
+      </div>
+      <div class="details">
+        <span class="organisation">{{ exp.organisation }}</span>
+        <span class="separator">|</span>
+        <span class="time-period">{{ exp.from }} - {{ exp.to }}</span>
+      </div>
+      <div class="points">
+        <ul>
+          <ng-container *ngFor="let point of exp?.points">
+            <li>{{ point }}</li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+  </ng-container>
+</div>

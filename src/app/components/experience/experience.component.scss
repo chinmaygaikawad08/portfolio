@@ -1,0 +1,59 @@
+.experience-container {
+  background-color: #001524; // Background color
+  padding: 20px;
+  color: #e5e5e5;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    color: #00b4d8; // Primary color for the heading
+    margin-bottom: 20px;
+  }
+
+  .experience-item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #0077b6; // Secondary color as a separator
+    padding-bottom: 15px;
+
+    .role {
+      color: #00b4d8; // Primary color for the role
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .details {
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+
+      .organisation {
+        color: #0e6ba8; // Darker secondary color for organization
+        font-weight: bold;
+      }
+
+      .separator {
+        margin: 0 10px;
+        color: #dee2e6; // Slightly darker separator color
+      }
+
+      .time-period {
+        color: #e9ecef; // Light secondary color for the time period
+      }
+    }
+
+    .points {
+      margin-top: 15px;
+
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+
+        li {
+          line-height: 1.8;
+          text-align: justify;
+          color: #ffffff; // White for points text
+        }
+      }
+    }
+  }
+}
