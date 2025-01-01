@@ -61,11 +61,11 @@ export class ConstantService {
         value:[
           {
             title:"Ubuntu",
-            logo:""
+            logo:"../../assets/Images/ubuntu-svgrepo-com (2).svg",
           },
           {
             title:"Windows",
-            logo:""
+            logo:"../../assets/Images/windows-azure-svgrepo-com.svg",
           }
         ]
       },
@@ -74,26 +74,69 @@ export class ConstantService {
         value:[
           {
             title:"TypeScript",
-            logo:"../../assets/Images/instagram-svgrepo-com.svg",
+            logo:"../../assets/Images/typescript-official-svgrepo-com.svg",
             proficiency:80
           },
           {
-            title:"Python",
-            logo:"../../assets/Images/instagram-svgrepo-com.svg",            
-            proficiency:70
+            title: "Python",
+            logo: "../../assets/Images/python-svgrepo-com.svg",
+            proficiency: 70
           },
           {
-            title:"HTML",
-            logo:"../../assets/Images/instagram-svgrepo-com.svg",            
-            proficiency:85
+            title: "HTML",
+            logo: "../../assets/Images/html-svgrepo-com.svg",
+            proficiency: 85
           },
           {
-            title:"CSS",
-            logo:"../../assets/Images/instagram-svgrepo-com.svg",            
-            proficiency:80
+            title: "CSS",
+            logo: "../../assets/Images/css-3-svgrepo-com.svg",
+            proficiency: 80
           }
         ]
-      }
+      },
+      VERSION_CONTROL:{
+        'display':"Version Control",
+        value:[
+          {
+            title:"Git",
+            logo:"../../assets/Images/git-svgrepo-com (1).svg",
+          },
+          {
+            title:"GitHub",
+            logo:"../../assets/Images/github-svgrepo-com.svg",
+          },
+          {
+            title:"GitLab",
+            logo:"../../assets/Images/gitlab-svgrepo-com.svg",
+          }
+        ]
+      },
+      FRAMEWORK:{
+        'display':"Framework",
+        value:[
+          {
+            title:"Angular",
+            logo:"../../assets/Images/angular-svgrepo-com.svg",
+          },
+        ]
+      },
+      TOOLS:{
+        'display':"Tools",
+        value:[
+          {
+            title:"VS Code",
+            logo:"../../assets/Images/vscode-svgrepo-com.svg",
+          },
+          {
+            title:"Chat GPT",
+            logo:"../../assets/Images/chatgpt-6.svg",
+          },
+          {
+            title:"Gemini",
+            logo:"../../assets/Images/google-gemini-logomark-24438.svg",
+          },
+        ]
+      },
     }
 
 

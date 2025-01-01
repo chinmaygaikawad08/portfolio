@@ -1,8 +1,13 @@
+@import '../../../style.scss'; // Importing root-level styles
+
+
+
 .experience-container {
-  background-color: #001524; // Background color
+  background-color: $base-palette-6-color-1; // Background color
   padding: 20px;
   color: #e5e5e5;
   font-family: Arial, sans-serif;
+  height: 100%;
 
   h2 {
     color: #00b4d8; // Primary color for the heading

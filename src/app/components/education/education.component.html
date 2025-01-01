@@ -1,22 +1,30 @@
-<div class="education-container">
-  <h2>Education</h2>
-  <ng-container *ngFor="let exp of education">
-    <div class="education-item">
-      <!-- Left Section -->
-      <div class="left">
-        <div class="title">{{ exp.title }}</div>
-        <div class="year">{{ exp.year }}</div>
-      </div>
+<div class="section">
+  <div class="section-heading">Education</div>
+  <div class="section-content">
+   
 
-      <!-- Right Section -->
-      <div class="right">
-        <div class="label">{{ exp.label }}</div>
-        <div class="institute">{{ exp.institute }}</div>
-        <div class="university">{{ exp.university }}</div>
-        <div>
-          <span class="grade-chip">{{ exp.grade_unit }}: {{ exp.grades }}</span>
+    <div class="education-container">
+      <ng-container *ngFor="let exp of education">
+        <div class="education-item">
+          <!-- Left Section -->
+          <div class="left">
+            <div class="title">{{ exp.title }}</div>
+            <div class="year">{{ exp.year }}</div>
+          </div>
+    
+          <!-- Right Section -->
+          <div class="right">
+            <div class="label">{{ exp.label }}</div>
+            <div class="institute">{{ exp.institute }}</div>
+            <div class="university">{{ exp.university }}</div>
+            <div>
+              <span class="grade-chip">{{ exp.grade_unit }}: {{ exp.grades }}</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
-  </ng-container>
+
+  </div>
 </div>
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -16,6 +16,7 @@ export class PortfolioComponent implements OnInit {
     { "display": "Certifications", "key": "CERTIFICATIONS" },
     { "display": "Contact", "key": "CONTACT" }
   ]
+  private observer: IntersectionObserver;
 
   constructor() { }
 
@@ -26,5 +27,47 @@ export class PortfolioComponent implements OnInit {
     this.selectedTab = tab;
     console.log(this.selectedTab)
   }
+
+
+    // Scroll to a specific section
+    scrollTo(sectionId: string): void {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      this.updateSelectedTab(sectionId);
+    }
+  
+    // Update selected tab based on section ID
+    updateSelectedTab(sectionId): void {
+       this.selectedTab = sectionId;
+    }
+  
+  
+
+
+    ngAfterViewInit(): void {
+      const sections = document.querySelectorAll('.section');
+  
+      this.observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const sectionId = entry.target.id;
+              if(sectionId && sectionId?.trim()?.length){
+                this.updateSelectedTab(sectionId);
+              }
+            }
+          });
+        },
+        { threshold: 0.6 } // Trigger when 60% of the section is visible
+      );
+  
+      sections.forEach((section) => this.observer.observe(section));
+    }
+  
+    ngOnDestroy(): void {
+      if (this.observer) {
+        this.observer.disconnect();
+      }
+    }
+  
 
 }

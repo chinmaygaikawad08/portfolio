@@ -1,12 +1,128 @@
-// background colors
-$background-primary: #001524;
 
-// text colors
-$text-primary: #ffffff;
-$text-secondary: #e5e5e5;
-$text-secondary-hover: #edede9;
-$text-primary-highlight: #ffffff;
 
 // colors
-$nav-border-selected: #00b4d8;
-$nav-border-hover: #0077b6;
+$base-palette-5-color-1: #00b4d8;
+$base-palette-5-color-3: #0077b6;
+
+
+$base-color-blue-1: #03045e;
+$base-color-blue-2: #023e8a;
+$base-color-blue-3: #0077b6;
+$base-color-blue-4: #00b4d8;
+$base-color-blue-4: #48cae4;
+
+$base-color-dark-1: #000000;
+$base-color-dark-2: #0d1b2a;
+$base-color-dark-3: #1b263b;
+$base-color-dark-4: #1d3557;
+
+$base-color-light-1: #ced4da;
+$base-color-light-2: #dee2e6;
+$base-color-light-3: #e9ecef;
+$base-color-light-4: #f8f9fa;
+
+
+$base-palette-1-color-1: #F8F9FA;
+$base-palette-1-color-2: #E9ECEF;
+$base-palette-1-color-3: #DEE2E6;
+$base-palette-1-color-4: #CED4DA;
+$base-palette-1-color-5: #ADB5BD;
+$base-palette-1-color-6: #6C757D;
+$base-palette-1-color-7: #495057;
+$base-palette-1-color-8: #343A40;
+$base-palette-1-color-9: #212529;
+
+$base-palette-2-color-1: #03045E;
+$base-palette-2-color-2: #023E8A;
+$base-palette-2-color-3: #0077B6;
+$base-palette-2-color-4: #0096C7;
+$base-palette-2-color-5: #00B4D8;
+$base-palette-2-color-6: #48CAE4;
+$base-palette-2-color-7: #90E0EF;
+$base-palette-2-color-8: #ADE8F4;
+$base-palette-2-color-9: #CAF0F8;
+
+$base-palette-3-color-1: #012A4A;
+$base-palette-3-color-2: #013A63;
+$base-palette-3-color-3: #01497C;
+$base-palette-3-color-4: #014F86;
+$base-palette-3-color-5: #2A6F97;
+$base-palette-3-color-6: #2C7DA0;
+$base-palette-3-color-7: #468FAF;
+$base-palette-3-color-8: #61A5C2;
+$base-palette-3-color-9: #89C2D9;
+$base-palette-3-color-10: #A9D6E5;
+
+$base-palette-4-color-1: #E3F2FD;
+$base-palette-4-color-2: #BBDEFB;
+$base-palette-4-color-3: #90CAF9;
+$base-palette-4-color-4: #64B5F6;
+$base-palette-4-color-5: #42A5F5;
+$base-palette-4-color-6: #2196F3;
+$base-palette-4-color-7: #1E88E5;
+$base-palette-4-color-8: #1976D2;
+$base-palette-4-color-9: #1565C0;
+$base-palette-4-color-10: #0D47A1;
+
+$base-palette-5-color-1: #00A6FB;
+$base-palette-5-color-2: #0582CA;
+$base-palette-5-color-3: #006494;
+$base-palette-5-color-4: #003554;
+$base-palette-5-color-5: #051923;
+
+$base-palette-6-color-1: #00132D;
+$base-palette-6-color-2: #00193B;
+$base-palette-6-color-3: #001E45;
+$base-palette-6-color-4: #002657;
+$base-palette-6-color-5: #002D67;
+$base-palette-6-color-6: #00377E;
+
+$base-palette-7-color-1: #84C1FF;
+$base-palette-7-color-2: #ADD6FF;
+$base-palette-7-color-3: #D6EAFF;
+$base-palette-7-color-4: #EAF4FF;
+$base-palette-7-color-5: #F8FBFF;
+
+
+/* Parent component CSS */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    height: 80px;
+    color:$base-palette-4-color-1; // Primary color for the heading
+    margin-bottom: 20px;
+  }
+  
+  .section-content {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    text-align: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #555;
+  }
+  
+  /* Optional: Add consistent scroll behavior */
+  .section-content::-webkit-scrollbar {
+    width: 8px;
+  }
+  .section-content::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+  .section-content::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }

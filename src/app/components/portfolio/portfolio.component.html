@@ -1,9 +1,5 @@
 <head>
-    <meta charset="utf-8">
-    <title>Chinmay Gaikawad</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+ 
 </head>
 
 <body>
@@ -18,7 +14,7 @@
             <div class="sidebar-middle">
 
                 <ng-container *ngFor="let tab of tabMap">
-                    <span class="tabClass" [class.selected]="tab.key == selectedTab" (click)="selectTab(tab.key)">
+                    <span class="tabClass" [class.selected]="tab.key == selectedTab" (click)="scrollTo(tab.key)" >
                         {{ tab.display }}
                     </span>
                 </ng-container>
@@ -44,15 +40,29 @@
             </div>
         </div>
         <div class="mainPage">
-            <ng-container *ngIf="selectedTab=='EXPERIENCE'">
-                <app-experience></app-experience>
-            </ng-container>
-            <ng-container *ngIf="selectedTab=='EDUCATION'">
-                <app-education></app-education>
-            </ng-container>
-            <ng-container *ngIf="selectedTab=='SKILLS_TECHNOLOGIES'">
-                <app-skills></app-skills>
-            </ng-container>
+
+            <section id="HOME" class="section">
+                <app-home style="height: 100vh;width: 100%;" (scrollTo)="scrollTo($event)"></app-home>
+            </section>
+            <section id="ABOUT" class="section">
+                <app-about style="height: 100vh;width: 100%;"></app-about>
+            </section>
+            <section id="EXPERIENCE" class="section">
+                <app-experience style="height: 100vh;width: 100%;"></app-experience>
+            </section>
+            <section id="EDUCATION" class="section">
+                <app-education style="height: 100vh;width: 100%;"></app-education>
+            </section>
+            <section id="SKILLS_TECHNOLOGIES" class="section">
+                <app-skills style="height: 100vh;width: 100%;"></app-skills>
+            </section>
+            <section id="CERTIFICATIONS" class="section">
+                <app-certification style="height: 100vh;width: 100%;"></app-certification>
+            </section>
+            <section id="CONTACT" class="section">
+                <app-contact style="height: 100vh;width: 100%;"></app-contact>
+            </section>
+
         </div>
     </div>
 </body>

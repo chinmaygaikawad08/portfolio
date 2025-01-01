@@ -18,15 +18,23 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { CertificationComponent } from './components/certification/certification.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PortfolioComponent,
+    HomeComponent,
+    AboutComponent,
     ExperienceComponent,
     EducationComponent,
-    SkillsComponent
+    SkillsComponent,
+    CertificationComponent,
+    ContactComponent
 
 
   ],
@@ -37,25 +45,17 @@ import { SkillsComponent } from './components/skills/skills.component';
     HttpClientModule, FormsModule, NgSearchFilterModule, NgMultiSelectDropDownModule.forRoot(), InfiniteScrollModule, AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireMessagingModule,
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyBHjfu5_sM5FyDkVpgqIJ1DJsot3EAIzcg",
-
-      authDomain: "hopfirst-65914.firebaseapp.com",
-
-      databaseURL: "https://hopfirst-65914.firebaseio.com",
-
-      projectId: "hopfirst-65914",
-
-      storageBucket: "hopfirst-65914.appspot.com",
-
-      messagingSenderId: "189210679564",
-
-      appId: "1:189210679564:web:a74c91b1370c1a55981129",
-
-      measurementId: "G-QN9GJ1V0P2",
-    }),
   ],
-  exports: [ExperienceComponent, EducationComponent, SkillsComponent],
+  exports: [
+    PortfolioComponent,
+    HomeComponent,
+    AboutComponent,
+    ExperienceComponent,
+    EducationComponent,
+    SkillsComponent,
+    CertificationComponent,
+    ContactComponent
+  ],
   providers: [
     AsyncPipe],
 

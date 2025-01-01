@@ -1,0 +1,118 @@
+
+@import '../../../style.scss'; // Importing root-level styles
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $base-palette-6-color-1;
+  color: $base-color-light-4;
+}
+
+.home-page {
+  display: flex;
+  height: calc(100% - 80px); /* Height adjusted */
+  width: 100%; /* Flexible width */
+  position: relative;
+  padding: 0 0 0 2rem;
+}
+
+.info-section {
+  flex: 0 0 300px; /* Fixed width for the info section */
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.info-content {
+  text-align: left;
+}
+
+.name-role {
+  display: flex;
+  column-gap: 10px;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+  text-transform: capitalize !important;
+  
+}
+
+.name-role .name,
+.name-role .surname {
+  font-size: 3rem;
+  margin: 0;
+  color: $base-color-light-4;
+  font-weight: bold;
+}
+
+.name-role .role {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 2rem;
+  color: $base-palette-5-color-1;
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+}
+
+.contact .btn {
+  background-color: $base-color-blue-3;
+  color: $base-color-light-4;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact .btn:hover {
+  background-color: $base-color-blue-2;
+}
+
+.contact-details .contact-item {
+  display: block;
+  margin: 0.5rem 0;
+  color: $base-color-light-3;
+}
+
+.image-section {
+  flex: 1; /* This section will take the remaining space */
+  display: flex;
+  justify-content: flex-end; /* Image aligned to the right */
+  align-items: flex-end; /* Image aligned to the bottom */
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 2.5s forwards;
+  position: absolute;
+  right: -20px;
+  bottom: -60px;
+}
+
+.image-section img {
+  width: auto;
+  max-height: 80vh;
+  background: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
